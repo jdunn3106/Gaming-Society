@@ -6,6 +6,7 @@
 
     <body>
         <header>
+            <img src="images/logo-game-controller-2.png" alt="logo" id="logo"/>
             <h1>RGU Gaming Society</h1>
         </header>
 
@@ -19,11 +20,12 @@
             </ul>
         </nav>
 
-        <main>
-            <div>
+        <main id="cmain">
+            <div id="left-col">
                 <form>
                     <fieldset>
-                        <legend>Contact us using the form below.</legend>
+                        <h3>Contact Us</h3>
+                        <p>Use the form below to contact us</p>
 
                         <label for="name">Name:</label>
                         <input type="text" name="name" value=""/><br/>
@@ -39,8 +41,18 @@
 
                         <label for="file">Attach a file here:</label>
                         <input type="file"/>
+
+                        <button type="button" onclick='document.getElementById("form_outcome").innerHTML="Form has been sent successfully!"'>Submit</button>
+
+                        <div>
+                            <p id="form_outcome"></p>
+                        </div>
+                        
                     </fieldset>
                 </form>
+            </div>
+            <div id="right-col">
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">So many incredible memories from <a href="https://twitter.com/hashtag/BlizzCon?src=hash&amp;ref_src=twsrc%5Etfw">#BlizzCon</a> 2023!<br><br>Thank you all 💙 <a href="https://t.co/nuJQZRSmrm">pic.twitter.com/nuJQZRSmrm</a></p>&mdash; Blizzard Entertainment (@Blizzard_Ent) <a href="https://twitter.com/Blizzard_Ent/status/1721010723457802383?ref_src=twsrc%5Etfw">November 5, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </main>
 

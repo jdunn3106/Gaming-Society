@@ -4,6 +4,7 @@ body {
 
 header {
     background-color: white; border-top-left-radius: 10px; border-top-right-radius: 10px;
+    padding: 10px; margin: 10px; margin-bottom: 0px;
 }
 
 h1 + h2 + h3 + h4 + h5 + h6 + p {
@@ -12,6 +13,7 @@ h1 + h2 + h3 + h4 + h5 + h6 + p {
 
 h1 {
     font-size: 38pt; border-radius: 10px;
+    display: inline;
 }
 
 h3 {
@@ -23,22 +25,30 @@ p {
 }
 
 main {
-    background-color: white; border-radius: 10px;
+    background-color: white; margin-left: 10px; margin-right: 10px; border-radius: 10px;
 }
 
 aside {
-    background-color: white; border-radius: 10px;
+    background-color: white; border-radius: 10px; margin: 10px;
 }
 
 footer {
-    background-color: #f006e1; border-radius: 10px;
+    background-color: #f006e1; border-radius: 10px; margin: 10px;
+}
+
+nav {
+    margin-left: 10px; margin-right: 10px;
 }
 
 
 
 
+nav ul {
+    margin: 0; padding: 0; overflow: hidden;
+}
+
 nav li {
-    border: 2px solid white; background-color: #f006e1; list-style-type: none;
+    border: 2px solid white; background-color: #f006e1; list-style-type: none; float: left; width: 15%; padding: 16px;
 }
 
 nav li a {
@@ -77,3 +87,67 @@ Table th {
 }
 
 
+
+
+#logo {
+    height: 50px; width: 50px; float: left; margin-right: 10px;
+}
+
+
+
+
+fieldset {
+    margin: 0px; padding: 0; overflow: hidden; float: left; background-color: white;
+}
+
+#left-col {
+    float: left; width: 60%; background-color: white;
+}
+
+#right-col {
+    float: right; width: 35%; background-color: white;
+}
+
+#cmain {
+    height: 600px;
+}
+
+.gallery-image {
+    width: 100%;
+}
+
+#img-gallery {
+    padding-top: 10px;
+}
+
+#img-gallery .row {
+    margin-bottom: 10px;
+}
+
+#img-gallery img {
+    width: 500px;
+    height: 300px;
+}
+
+.row {
+    display: flex;
+}
+
+.container {
+    flex: 20%;
+    padding: 5px;
+}
+
+#memberColumn {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+#login {
+    float: right;
+    padding: 5px;
+}
+
+.loginInput {
+    float: left;
+}
