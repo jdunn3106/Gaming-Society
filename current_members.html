@@ -1,78 +1,135 @@
 <html>
-    <head>
-        <title>Gaming Society</title>
-        <link rel="stylesheet" href="css/main.css">
-    </head>
+<!--
+Threat Model
+Threat Source: External
+Threat Agent: Human
+Threat Intention: Intentional
+Threat Motivation: Embarrassment of the society
+Threat Impact: Defacement of society website, changing of members
+images, possible identify theft of members.
+Threat Mitigation: Login validation, 2FA in place before member images
+can be changed, email updates to members whose images have been changed.
+-->
 
-    <body>
-        <header>
-            <img src="images/logo-game-controller-2.png" alt="logo" id="logo"/>
-            <h1>RGU Gaming Society</h1>
-        </header>
+<head>
+    <title>Gaming Society</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="img_gallery.html">Gallery</a></li>
-                <li class="active"><a href="current_members.html">Current Members</a></li>
-                <li><a href="event_calendar.html">Events</a></li>
-                <li><a href="contact_us.html">Contact Us</a></li>
-            </ul>
-        </nav>
+<body>
+    <!-- Logo image and webpage title -->
+    <header>
+        <img src="images/logo-game-controller-2.png" alt="logo" id="logo" />
+        <h1>RGU Gaming Society</h1>
 
-        <main>
-            <div class="container">
-                <div class="row">
-                
-                    <div class="col-sm" id="memberColumn">
-                
-                        <h5>Captain</h5>
-                        <img src="images/god-of-war-brutal-kratos-sticker.png" class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden">
-                        <h5>Spiderman</h5>
-                    
-                    </div>
+        <!-- Log in form -->
+        <form id="login">
+            <div class="loginInput">
+                <input type="text" name="email" placeholder="Email" />
+            </div>
 
-                    <div class="col-sm" id="memberColumn">
-                
-                        <h5>Captain</h5>
-                        <img src="images/god-of-war-brutal-kratos-sticker.png" class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden">
-                        <h5>Spiderman</h5>
-                    
-                    </div>
+            <div class="loginInput">
+                <input type="text" name="password" placeholder="Password" />
+            </div>
 
-                    <div class="col-sm" id="memberColumn">
-                
-                        <h5>Captain</h5>
-                        <img src="images/god-of-war-brutal-kratos-sticker.png" class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden">
-                        <h5>Spiderman</h5>
-                    
-                    </div>
+            <div class="loginInput">
+                <button type="button" onclick="login()">Login</button>
+            </div>
 
-                    <div class="col-sm" id="memberColumn">
-                
-                        <h5>Captain</h5>
-                        <img src="images/god-of-war-brutal-kratos-sticker.png" class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden">
-                        <h5>Spiderman</h5>
-                    
-                    </div>
+        </form>
 
-                    <div class="col-sm" id="memberColumn">
-                
-                        <h5>Captain</h5>
-                        <img src="images/god-of-war-brutal-kratos-sticker.png" class="rounded-circle massie-hovering" width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden">
-                        <h5>Spiderman</h5>
-                    
-                    </div>
+    </header>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="img_gallery.html">Gallery</a></li>
+            <li class="active"><a href="current_members.html">Current Members</a></li>
+            <li><a href="event_calendar.html">Events</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="current_playing.html">Current Games</a></li>
+            <li><a href="socials.html">Socials</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm" id="memberColumn">
+
+                    <h5>Captain</h5>
+                    <img src="images/god-of-war-brutal-kratos-sticker.png" class="rounded-circle massie-hovering"
+                        width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden"
+                        alt="Kratos from god of war">
+                    <h5>Spiderman</h5>
+
                 </div>
+
+                <div class="col-sm" id="memberColumn">
+
+                    <h5>Captain</h5>
+                    <img src="images/god-of-war-brutal-kratos-sticker.png" class="rounded-circle massie-hovering"
+                        width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden"
+                        alt="Kratos from god of war">
+                    <h5>Spiderman</h5>
+
                 </div>
-        </main>
 
-        <aside> </aside>
+                <div class="col-sm" id="memberColumn">
 
-        <footer>
-            <p>
-                Copyright Jack Dunn
-            </p>
-        </footer>
-    </body>
+                    <h5>Captain</h5>
+                    <img src="images/god-of-war-brutal-kratos-sticker.png" class="rounded-circle massie-hovering"
+                        width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden"
+                        alt="Kratos from god of war">
+                    <h5>Spiderman</h5>
+
+                </div>
+
+                <div class="col-sm" id="memberColumn">
+
+                    <h5>Captain</h5>
+                    <img src="images/god-of-war-brutal-kratos-sticker.png" class="rounded-circle massie-hovering"
+                        width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden"
+                        alt="Kratos from god of war">
+                    <h5>Spiderman</h5>
+
+                </div>
+
+                <div class="col-sm" id="memberColumn">
+
+                    <h5>Captain</h5>
+                    <img src="images/god-of-war-brutal-kratos-sticker.png" class="rounded-circle massie-hovering"
+                        width="120" height="120" preserveAspectRatio="xMidYMid slice" style="overflow:hidden"
+                        alt="Kratos from god of war">
+                    <h5>Spiderman</h5>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <aside> </aside>
+
+    <footer>
+        <p>
+            Copyright Jack Dunn
+        </p>
+    </footer>
+</body>
+
+<script>
+    var counter = 2;
+
+    function login() {
+        if (counter % 2 == 0) {
+            alert("You have been logged in!");
+        }
+        else {
+            alert("You have been logged out!");
+        }
+        counter += 1;
+    }
+</script>
+
 </html>

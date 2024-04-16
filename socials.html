@@ -1,0 +1,114 @@
+<html>
+<!-- https://www.youtube.com/watch?v=lHSYKNeWtWk&ab_channel=SoftwareSage 
+    The video I used to help me with the layout of the social media links-->
+
+<head>
+    <title>Gaming Society</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo-game-controller-2.png" alt="logo" id="logo" />
+        <h1>RGU Gaming Society</h1>
+
+        <!-- Log in form -->
+        <form id="login">
+            <div class="loginInput">
+                <input type="text" name="email" placeholder="Email" />
+            </div>
+
+            <div class="loginInput">
+                <input type="text" name="password" placeholder="Password" />
+            </div>
+
+            <div class="loginInput">
+                <button type="button" onclick="login()">Login</button>
+            </div>
+
+        </form>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="img_gallery.html">Gallery</a></li>
+            <li><a href="current_members.html">Current Members</a></li>
+            <li><a href="event_calendar.html">Events</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="current_playing.html">Current Games</a></li>
+            <li class="active"><a href="socials.html">Socials</a></li>
+        </ul>
+    </nav>
+
+    <!--The list of social media links-->
+    <main class="social">
+        <h2>Here you can find our social media pages!</h2>
+
+        <a href="https://discord.com/invite/qYMaUa8DRK" class="links">
+            The RGU Gaming Discord Server
+        </a>
+
+        <a href="https://www.instagram.com/rgugaming/" class="links">
+            Instagram
+        </a>
+
+        <a href="https://rgucraft.uk/" class="links">
+            RGUCraft Website
+        </a>
+
+        <a href="https://discord.com/invite/rTQn3Xnq" class="links">
+            RGUCraft Discord Server
+        </a>
+
+        <a href="https://www.facebook.com/rgugaming/" class="links">
+            Facebook
+        </a>
+
+        <a href="https://twitter.com/rgugaming" class="links">
+            Twitter
+        </a>
+
+        <a href="https://www.twitch.tv/rgugaming" class="links">
+            Twitch
+        </a>
+
+        <a href="https://www.tiktok.com/@rgugaming" class="links">
+            TikTok
+        </a>
+
+        <a href="https://www.youtube.com/channel/UCHOft5Zw_RRBXtI4ykPiDGA" class="links">
+            Youtube
+        </a>
+
+    </main>
+
+    <footer>
+        <p>
+            Copyright Jack Dunn
+        </p>
+    </footer>
+</body>
+
+<script>
+    var counter = 2;
+
+    function login() {
+        if (counter % 2 == 0) {
+            alert("You have been logged in!");
+        }
+        else {
+            alert("You have been logged out!");
+        }
+        counter += 1;
+    }
+</script>
+
+</html>

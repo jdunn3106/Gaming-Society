@@ -3,16 +3,22 @@ body {
 }
 
 header {
-    background-color: white; border-top-left-radius: 10px; border-top-right-radius: 10px;
-    padding: 10px; margin: 10px; margin-bottom: 0px;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 0px;
 }
 
-h1 + h2 + h3 + h4 + h5 + h6 + p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif; color: black;
+h1+h2+h3+h4+h5+h6+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
 }
 
 h1 {
-    font-size: 38pt; border-radius: 10px;
+    font-size: 38pt;
+    border-radius: 10px;
     display: inline;
 }
 
@@ -25,34 +31,51 @@ p {
 }
 
 main {
-    background-color: white; margin-left: 10px; margin-right: 10px; border-radius: 10px;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
 }
 
 aside {
-    background-color: white; border-radius: 10px; margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 footer {
-    background-color: #f006e1; border-radius: 10px; margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 nav {
-    margin-left: 10px; margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
 
 
 nav ul {
-    margin: 0; padding: 0; overflow: hidden;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 nav li {
-    border: 2px solid white; background-color: #f006e1; list-style-type: none; float: left; width: 15%; padding: 16px;
+    border: 2px solid white;
+    background-color: #f006e1;
+    list-style-type: none;
+    float: left;
+    width: 12.8%;
+    padding: 10px;
 }
 
 nav li a {
-    color: black; text-align: center; text-decoration: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
 }
 
 Nav li:hover {
@@ -67,10 +90,17 @@ Nav li:hover {
 
 
 table {
-    font-family: Verdana, Geneva, Tahoma, sans-serif; border-collapse: collapse;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-collapse: collapse;
 }
 
-table td, table th {
+table td {
+    height: 100px;
+    width: 190px;
+}
+
+table td,
+table th {
     border: 2px solid #f0f0f0;
 }
 
@@ -83,29 +113,44 @@ Table tr:hover {
 }
 
 Table th {
-    background-color: #f006e1; color: white;
+    background-color: #f006e1;
+    color: white;
+
+    text-align: center;
+    font-size: 10pt;
+
+    padding: 50px;
 }
 
 
-
-
 #logo {
-    height: 50px; width: 50px; float: left; margin-right: 10px;
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-right: 10px;
 }
 
 
 
 
 fieldset {
-    margin: 0px; padding: 0; overflow: hidden; float: left; background-color: white;
+    margin: 0px;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+    background-color: white;
 }
 
 #left-col {
-    float: left; width: 60%; background-color: white;
+    float: left;
+    width: 60%;
+    background-color: white;
 }
 
 #right-col {
-    float: right; width: 35%; background-color: white;
+    float: right;
+    width: 35%;
+    background-color: white;
 }
 
 #cmain {
@@ -150,4 +195,54 @@ fieldset {
 
 .loginInput {
     float: left;
+}
+
+#carouselExampleIndicators img {
+    height: 700;
+}
+
+.links {
+    text-align: center;
+    margin-top: 20px;
+    border: 1px solid #a10497;
+    background-color: #f006e1;
+    border-width: 2px;
+    padding: 20px;
+
+    width: 290px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 40px;
+
+    font-size: 18px;
+}
+
+.social a {
+    text-decoration: none;
+
+    color: black;
+    transition: color 1s;
+}
+
+.social a:hover {
+    color: white;
+
+    background-color: #a10497;
+}
+
+#article {
+    float: left;
+    vertical-align: middle;
+
+    width: 150px;
+    height: 150px;
+}
+
+#article_text {
+    font-size: 14px;
+
+    vertical-align: middle;
+    display: inline;
 }

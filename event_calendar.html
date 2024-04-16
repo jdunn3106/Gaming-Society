@@ -1,50 +1,149 @@
 <html>
-    <head>
-        <title>Gaming Society</title>
-        <link rel="stylesheet" href="css/main.css">
-    </head>
 
-    <body>
-        <header>
-            <img src="images/logo-game-controller-2.png" alt="logo" id="logo"/>
-            <h1>RGU Gaming Society</h1>
-        </header>
+<head>
+    <title>Gaming Society</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="img_gallery.html">Gallery</a></li>
-                <li><a href="current_members.html">Current Members</a></li>
-                <li class="active"><a href="event_calendar.html">Events</a></li>
-                <li><a href="contact_us.html">Contact Us</a></li>
-            </ul>
-        </nav>
+<body>
+    <!-- Logo image and webpage title -->
+    <header>
+        <img src="images/logo-game-controller-2.png" alt="logo" id="logo" />
+        <h1>RGU Gaming Society</h1>
 
-        <main>
-            <div>
-                <table>
-                    <tr>
-                        <td></td><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th><th>Sunday</th>
-                    </tr>
-                    <tr>
-                        <th>W1</th><td></td><td></td><td>Super Smash Bros session!</td><td></td><td></td><td></td><td></td>
-                    </tr>
-                    <tr>
-                        <th>W2</th><td></td><td></td><td></td><td></td><td></td><td>Drinks and Mario Kart!</td><td></td>
-                    </tr>
-                    <tr>
-                        <th>W3</th><td></td><td>Speed Running Super Mario bros</td><td></td><td></td><td></td><td></td><td></td>
-                    </tr>
-                </table>
+        <!-- Log in form -->
+        <form id="login">
+            <div class="loginInput">
+                <input type="text" name="email" placeholder="Email" />
             </div>
-        </main>
 
-        <aside> </aside>
+            <div class="loginInput">
+                <input type="text" name="password" placeholder="Password" />
+            </div>
 
-        <footer>
-            <p>
-                Copyright Jack Dunn
-            </p>
-        </footer>
-    </body>
+            <div class="loginInput">
+                <button type="button" onclick="login()">Login</button>
+            </div>
+
+        </form>
+
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="img_gallery.html">Gallery</a></li>
+            <li><a href="current_members.html">Current Members</a></li>
+            <li class="active"><a href="event_calendar.html">Events</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="current_playing.html">Current Games</a></li>
+            <li><a href="socials.html">Socials</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div>
+            <!--Table for events-->
+            <table>
+                <tr>
+                    <td></td>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+                <tr>
+                    <th>W1</th>
+                    <td></td>
+                    <td></td>
+                    <td>Super Smash Bros session!</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>W2</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Drinks and Mario Kart!</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>W3</th>
+                    <td></td>
+                    <td>Speed Running Super Mario bros</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h2>Want to recommend an event? Tell us below!</h2>
+
+            <form name="event">
+                <label for="event_title">Event Title:</label>
+                <input type="text" name="event_title" value="" /><br />
+
+                <label for="event_date">Event Title:</label>
+                <input type="date" name="event_date" value="" /><br />
+
+                <button type="button" onclick="submit_event()">Submit</button>
+            </form>
+
+        </div>
+    </main>
+
+    <aside> </aside>
+
+    <footer>
+        <p>
+            Copyright Jack Dunn
+        </p>
+    </footer>
+</body>
+
+<script>
+    var counter = 2;
+
+    function login() {
+        if (counter % 2 == 0) {
+            alert("You have been logged in!");
+        }
+        else {
+            alert("You have been logged out!");
+        }
+        counter += 1;
+    }
+</script>
+
+<script>
+    function submit_event() {
+        var title = document.forms["event"]["event_title"].value;
+        var date = document.forms["event"]["event_date"].value;
+        if (title == "") {
+            alert("An event must have a title");
+        }
+        else {
+            if (date.length == 0) {
+                alert("An event must have a date");
+            }
+            else {
+                alert("Event submitted! The society will contact you soon!");
+            }
+        }
+    }
+</script>
+
 </html>

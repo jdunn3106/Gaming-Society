@@ -1,69 +1,124 @@
 <html>
-    <head>
-        <title>Gaming Society</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/main.css">
-    </head>
+<!--
+Threat Model
+Threat Source: External
+Threat Agent: Human
+Threat Intention: Intentional
+Threat Motivation: Embarrassment of the society
+Threat Impact: Defacement of society website, innapropreite images could be uploaded.
+Threat Mitigation: Login validation, 2FA in place before images can be changed, the society leader should be able to approve and disapprove of images before being uploaded to the website.
+-->
 
-    <body>
-        <header>
-            <img src="images/logo-game-controller-2.png" alt="logo" id="logo"/> 
-            <h1>RGU Gaming Society</h1>
-        </header>
+<head>
+    <title>Gaming Society</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="img_gallery.html">Gallery</a></li>
-                <li><a href="current_members.html">Current Members</a></li>
-                <li><a href="event_calendar.html">Events</a></li>
-                <li><a href="contact_us.html">Contact Us</a></li>
-            </ul>
-        </nav>
+<body>
+    <!-- Logo image and webpage title -->
+    <header>
+        <img src="images/logo-game-controller-2.png" alt="logo" id="logo" />
+        <h1>RGU Gaming Society</h1>
 
-        <main>
-            <div id="img-gallery" class="container">
-                <div class="row">
-                    <div class="col-sm">
-                        <img id="img-gallery1" src="images/Collage_2022-09-14_13_58_12.jpg" class="gallery-img"/>
-                    </div>
-                    <div class="col-sm">
-                        <img id="img-gallery1" src="images/Cul-Reveal_ReactorA_VALORANT.webp" class="gallery-img"/>
-                    </div>
-                    <div class="col-sm">
-                        <img id="img-gallery1" src="images/download.jpeg" class="gallery-img"/>
-                    </div>
-                    <div class="col-sm">
-                        <img id="img-gallery1" src="images/Pac-man.png" class="gallery-img"/>
-                    </div>
-                    <div class="col-sm">
-                        <img id="img-gallery1" src="images/hades_09-dec-2019_01.jpg" class="gallery-img"/>
-                    </div>
-                    <div class="col-sm">
-                        <img id="img-gallery1" src="images/diablo4review16.jpg" class="gallery-img"/>
-                    </div>
+        <!-- Log in form -->
+        <form id="login">
+            <div class="loginInput">
+                <input type="text" name="email" placeholder="Email" />
+            </div>
+
+            <div class="loginInput">
+                <input type="text" name="password" placeholder="Password" />
+            </div>
+
+            <div class="loginInput">
+                <button type="button" onclick="login()">Login</button>
+            </div>
+
+        </form>
+
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="img_gallery.html">Gallery</a></li>
+            <li><a href="current_members.html">Current Members</a></li>
+            <li><a href="event_calendar.html">Events</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="current_playing.html">Current Games</a></li>
+            <li><a href="socials.html">Socials</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- how the images were split up into 2 collumns -->
+        <div id="img-gallery" class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <img id="img-gallery1" src="images/Collage_2022-09-14_13_58_12.jpg" class="gallery-img"
+                        alt="collage of photos from the society" />
+                </div>
+                <div class="col-sm">
+                    <img id="img-gallery1" src="images/Cul-Reveal_ReactorA_VALORANT.webp" class="gallery-img"
+                        alt="gameplay from valorant" />
+                </div>
+                <div class="col-sm">
+                    <img id="img-gallery1" src="images/download.jpeg" class="gallery-img"
+                        alt="gameplay from pokemon legends arcues" />
+                </div>
+                <div class="col-sm">
+                    <img id="img-gallery1" src="images/Pac-man.png" class="gallery-img" alt="photo from pac-man" />
+                </div>
+                <div class="col-sm">
+                    <img id="img-gallery1" src="images/hades_09-dec-2019_01.jpg" class="gallery-img"
+                        alt="gameplay from hades" />
+                </div>
+                <div class="col-sm">
+                    <img id="img-gallery1" src="images/diablo4review16.jpg" class="gallery-img"
+                        alt="gameplay from diable IV" />
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <aside> </aside>
+    <aside> </aside>
 
-        <footer>
-            <p>
-                Copyright Jack Dunn
-            </p>
-        </footer>
+    <footer>
+        <p>
+            Copyright Jack Dunn
+        </p>
+    </footer>
 
-        <script>
-            document.getElementById("img-gallery1").addEventListener("mouseover", highlight);
-            document.getElementById("img-gallery1").addEventListener("mouseout", delight);
-            function highlight() {
-                document.getElementById("img-gallery1").style="border: solid blue 2px;"
-            }
-            function delight() {
-                document.getElementById("img-gallery1").style="border: none;"
-            }
-            </script>
-    </body>
+    <script>
+        document.getElementById("img-gallery1").addEventListener("mouseover", highlight);
+        document.getElementById("img-gallery1").addEventListener("mouseout", delight);
+        function highlight() {
+            document.getElementById("img-gallery1").style = "border: solid blue 2px;"
+        }
+        function delight() {
+            document.getElementById("img-gallery1").style = "border: none;"
+        }
+    </script>
+</body>
+
+<script>
+    var counter = 2;
+
+    function login() {
+        if (counter % 2 == 0) {
+            alert("You have been logged in!");
+        }
+        else {
+            alert("You have been logged out!");
+        }
+        counter += 1;
+    }
+</script>
+
 </html>
